@@ -4,123 +4,81 @@ import { typeWrite } from "./typeWrite.js";
 import { hoverChangeDescription } from "./hoverChangeDescription.js";
 import { menu } from "./menu.js";
 
-// Function to initialize the menu, scroll reveal, and typewriter effect
+// Initialize menu, scroll reveal, and typewriter effect
 menu();
 initScrollReveal();
-typeWrite(document.querySelector(".typewriter"));
+typeWrite(document.querySelector("#typewriter"));
 
-// Function to change the cursor style to a transparent circle
+// Custom cursor (transparent circle)
 function setCursorCircle() {
-    const cursorCircle = document.createElement("div");
-    cursorCircle.classList.add("cursor-circle");
-    document.body.appendChild(cursorCircle);
+  const cursorCircle = document.createElement("div");
+  cursorCircle.classList.add("cursor-circle");
+  document.body.appendChild(cursorCircle);
 
-    document.addEventListener("mousemove", (event) => {
-        cursorCircle.style.left = event.clientX + "px";
-        cursorCircle.style.top = event.clientY + "px";
-    });
+  document.addEventListener("mousemove", (event) => {
+    cursorCircle.style.left = event.clientX + "px";
+    cursorCircle.style.top = event.clientY + "px";
+  });
 
-    document.addEventListener("mouseenter", () => {
-        cursorCircle.style.display = "block";
-    });
+  document.addEventListener("mouseenter", () => {
+    cursorCircle.style.display = "block";
+  });
 
-    document.addEventListener("mouseleave", () => {
-        cursorCircle.style.display = "none";
-    });
+  document.addEventListener("mouseleave", () => {
+    cursorCircle.style.display = "none";
+  });
 }
-
-// Call the function to set the cursor to a transparent circle
 setCursorCircle();
 
-// Function to handle hover effects on experience sections
+// ================= EDUCATION SECTION =================
 hoverChangeExperience(
-    ".digitalhouse",
-    `Trabalhei como instrutor conteudista em frontend na
-  Digital House, o trabalho consistia em criar conteúdos para as
-  aulas de especialização frontend. Alguns temas dos conteúdos
-  realizados foram: React, Redux, TypeScript, Testes,
-  GraphQL, Next.js, MUI, React Hook Form e styled-components.`,
-    "Professor conteudista em Frontend",
-    "Digital House",
-    "Nov 2021 - Nov 2022 (1 ano)"
+  ".zuplae", // <-- Your education item class in index.html
+  `From 2020 to 2024, I attended RMK College of Engineering & Technology, pursuing a B.Tech in AI & Data Science. 
+  This period enriched my academic excellence, leadership, and collaborative teamwork.`,
+  "Educational Background",
+  "RMK College of Engineering & Technology",
+  "2020 - 2024"
 );
 
+// ================= EXPERIENCE SECTION =================
 hoverChangeExperience(
-    ".zuplae",
-    `Trabalhei como Social Media e Designer na Zuplae que é um escola
-  de programação, onde teve como foco as criações de conteúdos sobre
-  programação para a comunidade dev através das redes sociais.`,
-    "Social Media e UI Designer",
-    "Zuplae",
-    "Jan 2022 - Abril 2022 (4 meses)"
+  ".zuplae", // <-- Example class used in your Experience section
+  `Worked on building and deploying ML pipelines for classification tasks, optimizing model performance, and creating dashboards to communicate results.`,
+  "Machine Learning Intern",
+  "Example Company",
+  "Jun 2023 - Dec 2023"
 );
 
-hoverChangeExperience(
-    ".codigofontetv",
-    `Trabalhei como Social Media e Designer no Código Fonte TV, 
-  onde teve como foco as criações de conteúdos sobre programação 
-  para a comunidade dev através das redes sociais.`,
-    "Social Media e Designer",
-    "Código Fonte TV",
-    "Jun 2021 - Jan 2022 (8 meses)"
-);
-
-hoverChangeExperience(
-    ".contweb",
-    `Realizei o estágio na ContWeb, uma empresa de contabilidade. 
-  Onde pela primeira vez tive experiência com o React. Além do
-  desenvolvimento frontend criei os designs da nova plataforma da empresa.`,
-    "Developer frontend e UI Designer",
-    "ContWeb",
-    "Set 2021 - Nov 2021 (3 meses)"
-);
-
-// Function to handle hover effects on skill descriptions
+// ================= SKILLS SECTION =================
 hoverChangeDescription(
-    ".html",
-    "HTML é uma linguagem de marcação, onde marcamos os elementos para definir quais informações a página vai exibir."
+  ".python",
+  "Python is a versatile programming language widely used for AI, data science, and automation."
 );
 hoverChangeDescription(
-    ".css",
-    "CSS é uma linguagem de folha de estilo composta por “camadas”, criado com o propósito de estilizar as páginas."
+  ".SQL",
+  "SQL is a language designed for managing and querying relational databases efficiently."
 );
 hoverChangeDescription(
-    ".js",
-    "JavaScript é uma linguagem de programação que permite a você implementar elementos dinâmicos em páginas web."
+  ".data",
+  "Data analysis involves inspecting, cleaning, and modeling data to discover useful insights."
 );
 hoverChangeDescription(
-    ".sass",
-    "Sass é um pré-processador CSS que adiciona alguns recursos que não estão disponíveis de forma nativa."
+  ".numpy",
+  "NumPy is a Python library for numerical computing, enabling fast matrix and array operations."
 );
 hoverChangeDescription(
-    ".react",
-    "React é uma biblioteca JavaScript com foco em criar interfaces de usuário de forma componetizada."
+  ".pandas",
+  "Pandas is a Python library that provides data structures and analysis tools for handling structured data."
 );
 hoverChangeDescription(
-    ".next",
-    "Next.js é uma estrutura da web que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para web baseados em React."
+  ".pytorch",
+  "PyTorch is an open-source deep learning framework widely used for building neural networks."
 );
 hoverChangeDescription(
-    ".styled",
-    "styled-components é uma biblioteca que utiliza o conceito de CSS-in-JS, ou seja, que nos permite escrever códigos CSS dentro do Javascript."
+  ".webs",
+  "Web development involves creating and maintaining websites and web applications."
 );
 hoverChangeDescription(
-    ".tailwind",
-    "Tailwind CSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas."
-);
-hoverChangeDescription(
-    ".typescript",
-    "TypeScript é um superset do JavaScript que incluir recursos que não estão presentes na linguagem de forma nativa, além de torná-la estática."
-);
-hoverChangeDescription(
-    ".radix",
-    "Radix é uma biblioteca que fornece componentes acessíveis e sem estilos para a criação de aplicação em React."
-);
-hoverChangeDescription(
-    ".cypress",
-    "Cypress é um framework para automação de testes end-to-end, onde atualmente usa a linguagem JavaScript."
-);
-hoverChangeDescription(
-    ".storybook",
-    "Storybook é uma ferramenta que tem como objetivo documentar e testar os componentes da aplicação."
+  ".seaborn",
+  "Seaborn is a Python data visualization library based on matplotlib, optimized for statistical graphics."
 );
