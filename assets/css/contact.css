@@ -1,0 +1,107 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+body {
+  font-family: 'Archivo';
+  text-align: center;
+  background-color: #111;
+  padding-top: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-box {
+  position: relative; /* Add this to make the submit button relative to the contact box */
+  max-width: 800px;
+  margin: 0 auto; /* Center align the contact box */
+  background-color: rgba(255, 255, 255, 0.2); /* Frosted glass effect */
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  text-align: left; /* Align contact info to the left */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for contrast */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+form label {
+  font-size: 0;
+  opacity: 0;
+  display: none;
+}
+
+form input,
+form textarea {
+  flex: 1; /* Take equal width */
+  margin: 0 10px 15px 0; /* Add space between input boxes */
+  padding: 10px; /* Add padding */
+  background: rgba(255, 255, 255, 0.7); /* Background color for input */
+  border: 2px solid #000;
+  color: #0f0033;
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+form textarea {
+  height: 40px; /* Reduce height of textarea */
+  resize: none;
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  position: absolute; /* Position the submit button absolutely */
+  bottom: 70px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Set a fixed width for the button */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  opacity: 0.7;
+}

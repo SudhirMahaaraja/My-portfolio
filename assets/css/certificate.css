@@ -1,0 +1,79 @@
+body{
+  background: #111111;
+  font-family: "Work Sans","monospace";
+  ::selection {
+    background-color: #986dff;
+    color: #fff
+}
+
+}
+h1{
+  color: #ffffff;
+  text-align: center;
+  span{
+    color: #986dff;
+  }
+}
+h2{
+  font-size: 50px;
+}
+
+.certificate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right:30px;
+  background-color: #151515;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-container:hover {
+  opacity: 1;
+}
+
+.certificate-container:hover .certificate-container:not(:hover) {
+  opacity: 0.5;
+}
+
+.certificate-container:hover .certificate-container:hover .certificate {
+  transform: scale(1.1);
+}
+
+.certificate {
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.certificate img {
+  margin-left: 250px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+.description {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.verify {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  /*border: 2px solid black; !* Add a border around the text *!*/
+  border-radius: 20px;
+  padding: 10px; /* Add padding inside the border */
+  margin-left: 400px;
+  margin-right: 400px;
+  background-color:whitesmoke;
+  opacity: 80%/* Set the background color to white */
+}
+
+

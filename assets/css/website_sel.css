@@ -1,0 +1,109 @@
+/* Your CSS styles here */
+
+:root {
+    --glow-hue: 222deg;
+    --shadow-hue: 180deg;
+    --spring-easing: linear(
+        0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156, 0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+        1.096, 1.157, 1.199, 1.224 20.3%, 1.231, 1.231, 1.226, 1.214 24.6%,
+        1.176 26.9%, 1.057 32.6%, 1.007 35.5%, 0.984, 0.968, 0.956, 0.949 42%,
+        0.946 44.1%, 0.95 46.5%, 0.998 57.2%, 1.007, 1.011 63.3%, 1.012 68.3%,
+        0.998 84%, 1
+    );
+    --spring-duration: 1.33s;
+}
+
+@keyframes text {
+    0% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: -100% center;
+    }
+}
+
+/* Your existing CSS styles */
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+body,
+html {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.portfolio {
+    text-align: center;
+    margin: 0 100px;
+}
+
+.button-container {
+    position: relative;
+}
+
+a.image-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    transition: all var(--spring-duration) var(--spring-easing), opacity 0.8s ease;
+    cursor: pointer;
+
+
+}
+
+.button-container:hover .image {
+    transform: scale(1.3); /* Increase size on hover */
+    opacity: 1; /* Ensure full opacity on hover */
+}
+
+.button-container:not(:hover) .image {
+    opacity: 0.5; /* Reduce opacity when not hovered */
+}
+
+
+.text {
+    font-family: "Work Sans";
+    font-size: 20px;
+    opacity: 80%;
+    color: #ffffff;
+    padding: 70px 20px;
+    background-clip: text;
+    background-color: var(--bg);
+    background-image: linear-gradient(120deg, transparent, hsla(var(--glow-hue), 100%, 80%, 0.66) 40%, hsla(var(--glow-hue), 100%, 90%, 0.9) 50%, transparent 52%);
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    background-position: center 200%;
+    position: relative;
+}
+
+
+.button-container:hover .text-container .text {
+    animation: text 0.66s ease-in 1 both;
+}
+
+
